@@ -24,7 +24,7 @@ class User(UserMixin, db.Model):
     id = db.Column(db.INTEGER, primary_key=True)
     username = db.Column(db.String(50), unique=True, nullable=False)
     email = db.Column(db.String(100), nullable=False)
-    password = db.Column(db.String(50), nullable=False)
+    password = db.Column(db.String(500), nullable=False)
 
 
 class Coffee(db.Model):
