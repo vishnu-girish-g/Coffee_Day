@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>SUCCESS</title>
+    <style>
+        .container{
+        display:grid;
+        align-items: center;
+        justify-content:center;
+        margin-top: 10%;
+        }
+        body{
+            min-height: 100vh;
+            background: url("/static/img/bg.jpg") no-repeat;
+            background-size: cover;
+            background-position: center;
+        }
+    </style>
+</head>
+<body>
+<div class="container">
+    <h1> Preparing Coffee</h1>
+   <h2> Collect your change: ${{change}}</h2>
+
+    <a href="{{url_for('welcome')}}"><button>Like To Have One More</button></a>
+    <a href="{{url_for('home')}}"><button>Back To Home</button></a>
+
+
+</div>
+
+</body>
+</html>

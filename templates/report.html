@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Resource Report</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            margin: 20px;
+        }
+        h1 {
+            color: #333;
+        }
+        table {
+            border-collapse: collapse;
+            width: 50%;
+            margin-top: 20px;
+        }
+        th, td {
+            border: 1px solid #ddd;
+            padding: 10px;
+            text-align: left;
+        }
+        th {
+            background-color: #f2f2f2;
+        }
+    </style>
+</head>
+<body>
+    <h1>Resource Report</h1>
+    <table>
+        <tr>
+            <th>Resource</th>
+            <th>Stock</th>
+        </tr>
+        <tr>
+            <td>Milk</td>
+            <td>{{ milk }} L</td>
+        </tr>
+        <tr>
+            <td>Water</td>
+            <td>{{ water }} L</td>
+        </tr>
+        <tr>
+            <td>Coffee</td>
+            <td>{{ coffee }} gm</td>
+        </tr>
+        <tr>
+            <td>Balance</td>
+            <td>${{ amount }}</td>
+        </tr>
+    </table>
+</body>
+</html>
+

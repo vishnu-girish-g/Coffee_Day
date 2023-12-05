@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/static/css/nav.css">
+    <link rel="stylesheet" href="/static/css/welcome.css">
+    <title>HOME PAGE</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            margin: 0;
+            padding: 0;
+        }
+
+
+    </style>
+</head>
+<body>
+    <div class="nav-tab">
+        <header class="header">
+            <div class="loader">
+                <span>C</span>
+                <span>O</span>
+                <span>F</span>
+                <span>F</span>
+                <span>E</span>
+                <span>E</span>
+                <span>&nbsp;</span>
+                <span>D</span>
+                <span>A</span>
+                <span>Y</span>
+
+            </div>
+            <nav class="navbar">
+                <a href="#"><button class="glow-on-hover" type="button">HOME</button></a>
+                {% if current_user.is_authenticated %}
+                    <a href="{{url_for('logout')}}"><button class="glow-on-hover" type="button">LOGOUT</button></a>
+                {% else %}
+                    <a href="{{url_for('sign_up')}}"><button class="glow-on-hover" type="button">REGISTER</button></a>
+                    <a href="{{url_for('sign_in')}}"><button class="glow-on-hover" type="button">LOGIN</button></a>
+                {% endif %}
+            </nav>
+        </header>
+</div>
+
+<div class="container">
+    <h1>WELCOME, {{name}}!<br> CHOOSE YOUR COFFEE</h1><br><br>
+
+    <form action="/coffee" method="POST">
+        <button type="submit" name="coffee_type" value="latte">LATTE<p style="font-size: x-small;">$4.5</p></button><br>
+        <button type="submit" name="coffee_type" value="espresso">ESPRESSO<p style="font-size: x-small;">$3.5</p></button><br>
+        <button type="submit" name="coffee_type" value="cappuccino">CAPPUCCINO<p style="font-size: x-small;">$6</p></button><br>
+    </form>
+</div>
+
+    
+</body>
+</html>
