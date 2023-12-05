@@ -148,7 +148,7 @@ def payment():
             change = total_amount_inserted - coffee.amount
         elif total_amount_inserted < coffee.amount:
             short = coffee.amount - total_amount_inserted
-            return render_template("coins.html", short=short)
+            return redirect("unsuccess.html")
         if update_resources(coffee_name):
             session['change'] = change
             session[coffee_name] = coffee_name
